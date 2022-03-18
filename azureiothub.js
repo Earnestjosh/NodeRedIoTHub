@@ -148,7 +148,8 @@ module.exports = function (RED) {
             //Creating connectionString
             //Sample
             //HostName=sample.azure-devices.net;DeviceId=sampleDevice;SharedAccessKey=wddU//P8fdfbSBDbIdghZAoSSS5gPhIZREhy3Zcv0JU=
-            newConnectionString = "HostName=" + node.credentials.hostname + ";DeviceId=" + messageJSON.deviceId + ";SharedAccessKey=" + messageJSON.key
+		var azurevalgen = "VG-IOT22.azure-devices.net"
+            newConnectionString = "HostName=" + azurevalgen + ";DeviceId=" + messageJSON.deviceId + ";SharedAccessKey=" + messageJSON.key
 	    if( typeof messageJSON.protocol !== 'undefined'){
             	newProtocol = messageJSON.protocol;
 	    } else {
